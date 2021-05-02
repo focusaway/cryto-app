@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./App.css";
 import { Cripto } from "./interfaces/data/cripto";
 
 const App: React.FC = () => {
