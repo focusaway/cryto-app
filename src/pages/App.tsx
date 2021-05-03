@@ -1,18 +1,17 @@
-import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
 
-import CriptoList from "./CriptoList/CriptoList";
+import CryptoList from "./CryptoList/CryptoList";
 
 export default function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/">
-          <CriptoList />
+          <CryptoList />
         </Route>
       </Switch>
     </Router>
