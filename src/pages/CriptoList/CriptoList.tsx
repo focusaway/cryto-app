@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Cripto } from "./interfaces/data/cripto";
+import { Cripto } from "../../interfaces/data/cripto";
 
-const App: React.FC = () => {
+const CriptoList: React.FC = () => {
   const [loading, setLoading] = useState(false)
   const [cryptos, setCryptos] = useState({} as any)
 
@@ -43,7 +43,7 @@ const App: React.FC = () => {
   });
 
   return (
-    <div className="App">
+    <div className="CriptoList">
       <div>
         <label>Filter By</label>
         <select>
@@ -80,4 +80,4 @@ const App: React.FC = () => {
   );
 }
 
-export default App;
+export default CriptoList;
