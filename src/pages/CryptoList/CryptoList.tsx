@@ -41,7 +41,7 @@ const CryptoList: React.FC = () => {
   const handleFilterChange = (event: FilterOutput): void => {
     switch (event.field) {
       case CRYPTO_FIELDS.NAME:
-        loadRows(cryptos.filter(crypto => crypto.name.startsWith(event.value)))
+        loadRows(cryptos.filter(crypto => crypto.name.toLowerCase().startsWith(event.value.toLowerCase())))
         break;
       case CRYPTO_FIELDS.MIN_PRICE:
         loadRows(cryptos.filter(crypto => crypto.price >= parseFloat(event.value)))
