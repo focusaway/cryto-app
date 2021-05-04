@@ -4,47 +4,45 @@
 
 ## Description
 
-With this exercise, we will evaluate your ability to develop a simple frontend application that meets the requirements for an imaginary product we want to build.
-
-Completing this should take you anywhere from a couple of hours to up to a day depending on your level of expertise, available time to focus, and level of detail you consider sufficient.
-
-That said, if it is taking you more than a day, you are probably spending more effort than necessary in some details.
-We expect that you submit your final work within one week of receiving the assignment, but please let us know if this is too short notice for you.
-
-Please feel free to reach out and ask questions if you need any clarification.
+In this project version you will be able to see the top 50 Crypto.
 
 ## Details
 
-### The Application
+You can filter them by the following criteria:
+- Name (starts with)
+- Max price (less than or equal)
+- Min price (greater than or equal)
+- Market cap (less than or equal)
+- Circulating supply (less than or equal)
 
-We are very enthusiastic about Crypto! We would like to have a site to view the top 50 Cryptos based on Market Cap. In the first part of this project, we would like to see a list of the 50 best cryptos, and we want to be able to filter them by:
+## Architecture, component design, and development choices
 
-1. Name
-2. Price
-3. Market Cap
-4. Circulating Supply (For example, Bitcoin Max supply is 21 Million Bitcoins, but the circulating supply is approx. 18 million)
+### Architecture
 
-## Requirements
+A simple SPA deployed in vercel, you can enter https://cryto-app.vercel.app/ to see the final result
 
-As we said before, it can take you a couple of hours or a day.
+The structure of the project is divided into:
+- components `src/components/README.md`
+- pages `src/pages/README.md`
+- constants `src/constants/README.md`
+- interfaces `src/interface/README.md`
+- test `src/test/README.md`
+- theme `src/theme/README.md`
+- utils `src/utils/README.md`
 
-1. You can use [this api](https://min-api.cryptocompare.com/) or any other API (just try to complete the requirements)
-2. Use Typescript
-3. Use Hooks
-4. Refactor the code
-5. Format values (dates, prices, etc)
-6. Use TailwindCSS
-7. Testing suite
-8. Good use of git (commits, pull requests, branches)
-9. Use of [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit messages
+### Components design
 
-## How to deliver
+The components were created in such a way that they had no associated logic, they comply with the necessary logic for the project.
 
-1. Clone this repo and share the link with us at the time to deliver (DO NOT FORK)
-2. Deploy this repo (you can use Vercel)
-3. Please document the repo and your code (using [JSDoc](https://jsdoc.app/))
-4. On the README, explain your architecture, component design, and development choices.
-5. A summary of what else you could/would like to have done if you had more time.
+### Development choices
+
+React-alert library added for speed
+
+## A summary of what else you could/would like to have done if you had more time.
+
+Even though not a week has passed, I would have liked to add authentication and a navigation menu. The detail of each crypto could be added, a visualization in the form of graphs in addition to an ordering.
+
+At this point I did not do the test set, I would have liked to spend more time and add some tests with cypress, but I am short of time and I deliver what I achieved which is something functional
 
 # Getting Started with Create React App
 
@@ -66,3 +64,8 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `yarn run docs`
+
+Generates the corresponding documentation of the react components.\
+[JSDoc](https://jsdoc.app/)
