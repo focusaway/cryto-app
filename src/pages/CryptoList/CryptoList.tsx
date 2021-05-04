@@ -12,6 +12,10 @@ import { getListFormattedCryptos } from "../../utils/functions";
 import { CRYPTO_LIST_ENDPOINT } from "../../constants/urls";
 import Filter, { FilterOutput } from "../../components/Filter/Filter";
 
+/**
+ * Page for showing list of crypto.
+ */
+
 const CryptoList: React.FC = () => {
   const alert = useAlert();
   const [loading, setLoading] = useState<boolean>(false);
