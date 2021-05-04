@@ -13,7 +13,16 @@ export interface Props {
   options: Array<Option>;
   onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
 }
-
+/**
+ * Component for standard select
+ * @component
+ * @prop   {string} classes  Classes css
+ * @prop   {string} name  Name HTML attribute
+ * @prop   {string}  label Label attribute
+ * @prop   {string} value  Value of data select
+ * @prop   {Array<Option>} options  List of options to select
+ * @prop   {function} onChange  Callback when value is changed
+ */
 const Selector: React.FC<Props> = ({ name, label, classes, options, value, onChange }) => {
   const selectorClasses=`${classes}`
 
