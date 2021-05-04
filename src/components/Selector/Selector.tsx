@@ -6,6 +6,7 @@ export interface Option {
 }
 
 export interface Props {
+  classes?: string;
   name?: string;
   label?: string;
   value?: string;
@@ -13,7 +14,8 @@ export interface Props {
   onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
 }
 
-const Selector: React.FC<Props> = ({ name, label, options, value, onChange }) => {
+const Selector: React.FC<Props> = ({ name, label, classes, options, value, onChange }) => {
+  const selectorClasses=`${classes}`
 
   const handleChange = (event: ChangeEvent<HTMLSelectElement>): void => {
     onChange(event);
@@ -26,11 +28,11 @@ const Selector: React.FC<Props> = ({ name, label, options, value, onChange }) =>
   ));
 
   return (
-    <label className="">
+    <label className={selectorClasses}>
       {label}
       <select
         name={name}
-        className=""
+        className="outline-none h-8 px-4 shadow-md bg-white rounded"
         value={value}
         onChange={handleChange}
         autoComplete="off"
