@@ -1,4 +1,8 @@
 import './Loader.scss';
+/**
+ * Component for ui loader
+ * @component
+ */
 const Loader: React.FC = () => {
   return (
     <div className="flex justify-center items-center h-full">
