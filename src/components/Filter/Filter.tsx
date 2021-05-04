@@ -16,7 +16,16 @@ export interface Props {
   onSearch: (event: FilterOutput) => void;
   onError?: (error: string) => void;
 }
-
+/**
+ * Component for standard filter
+ * @component
+ * @prop   {string} classes  classes css
+ * @prop   {string} labelButton  text for confirmation filter
+ * @prop   {string} clearLabelButton  text for clear filter
+ * @prop   {Array<Option>} options  List of options to filter
+ * @prop   {function} onSearch  Callback to search value
+ * @prop   {function} onError  Event to emit error
+ */
 const Filter: React.FC<Props> = ({ labelButton='Filter', clearLabelButton='Clear', classes, options, onSearch, onError }) => {
   const inputClasses=`${classes} flex`
   const [value, setValue] = useState('');
