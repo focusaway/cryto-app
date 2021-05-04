@@ -41,7 +41,7 @@ const Selector: React.FC<Props> = ({ name, label, classes, options, value, onCha
       {label}
       <select
         name={name}
-        className="outline-none h-8 px-4 shadow-md bg-white rounded"
+        className="outline-none h-8 px-4 shadow-md bg-white rounded w-full"
         value={value}
         onChange={handleChange}
         autoComplete="off"

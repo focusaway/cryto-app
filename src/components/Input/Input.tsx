@@ -28,7 +28,7 @@ const Input: React.FC<Props> = ({ label, name, classes, value, type, onChange })
     <label className={inputClasses}>
       {label}
       <input
-        className="h-8 px-4 rounded-3xl shadow-md outline-none"
+        className="h-8 px-4 rounded-3xl shadow-md outline-none w-full"
         name={name}
         type={type}
         value={value}

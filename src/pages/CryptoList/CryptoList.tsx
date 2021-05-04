@@ -75,7 +75,7 @@ const CryptoList: React.FC = () => {
   return (
     <div className="CryptoList">
       <Filter
-        classes="flex justify-end"
+        classes="grid grid-col-1 gap-4 lg:flex lg:justify-end"
         options={CRYPTO_FILTER_OPTIONS}
         onSearch={handleFilterChange}
         onError={handleError}
