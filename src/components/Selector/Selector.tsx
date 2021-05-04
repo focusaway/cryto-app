@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent } from "react";
 
 export interface Option {
   label: string;
@@ -6,17 +6,16 @@ export interface Option {
 }
 
 export interface Props {
+  name?: string;
   label?: string;
+  value?: string;
   options: Array<Option>;
   onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
 }
 
-const Selector: React.FC<Props> = ({ label, options, onChange }) => {
-  const [value, setValue] = useState('');
+const Selector: React.FC<Props> = ({ name, label, options, value, onChange }) => {
 
   const handleChange = (event: ChangeEvent<HTMLSelectElement>): void => {
-    const newValue = event?.target?.value;
-    setValue(newValue);
     onChange(event);
   };
 
@@ -27,8 +26,15 @@ const Selector: React.FC<Props> = ({ label, options, onChange }) => {
   ));
 
   return (
-    <label className="">{ label }
-      <select className="" value={value} onChange={handleChange} autoComplete="off">
+    <label className="">
+      {label}
+      <select
+        name={name}
+        className=""
+        value={value}
+        onChange={handleChange}
+        autoComplete="off"
+      >
         {optionList}
       </select>
     </label>
