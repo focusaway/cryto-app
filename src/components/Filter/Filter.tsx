@@ -19,9 +19,9 @@ export interface Props {
 /**
  * Component for standard filter
  * @component
- * @prop   {string} classes  classes css
- * @prop   {string} labelButton  text for confirmation filter
- * @prop   {string} clearLabelButton  text for clear filter
+ * @prop   {string} classes  Classes css
+ * @prop   {string} labelButton  Text for confirmation filter
+ * @prop   {string} clearLabelButton  Text for clear filter
  * @prop   {Array<Option>} options  List of options to filter
  * @prop   {function} onSearch  Callback to search value
  * @prop   {function} onError  Event to emit error
