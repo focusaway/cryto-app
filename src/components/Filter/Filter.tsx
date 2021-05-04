@@ -40,9 +40,13 @@ const Filter: React.FC<Props> = ({ labelButton='Filter', clearLabelButton='Clear
     emit();
   };
 
-  const emit = () => {
+  const handleClear = () => {
     setField('');
     setValue('');
+    emit();
+  }
+
+  const emit = () => {
     const output: FilterOutput = {
       field,
       value
@@ -80,7 +84,7 @@ const Filter: React.FC<Props> = ({ labelButton='Filter', clearLabelButton='Clear
       <button
         className="outline-none bg-red-600 text-white font-semibold rounded flex items-center justify-center h-8 px-4 shadow-md"
         type="button"
-        onClick={emit}
+        onClick={handleClear}
       >
         {clearLabelButton}
       </button>
