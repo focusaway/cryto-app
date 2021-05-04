@@ -5,7 +5,13 @@ export interface Props {
   headers: Row;
   rows: Array<Row>;
 }
-
+/**
+ * Component for standard ui table
+ * @component
+ * @prop   {string} classes  Classes css
+ * @prop   {Row} headers  List of header for table
+ * @prop   {Array<Row>}  rows List of rows for body table
+ */
 const Table: React.FC<Props> = ({ headers, rows, classes }) => {
 
   const wrapperClasses=`${classes} overflow-x-auto bg-white rounded-lg px-4 py-2 shadow-lg`
